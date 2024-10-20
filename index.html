@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Travel Website | Soumya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">Travel.</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Wonderful.<br><span>Island</span></h1>
+            <p>Discover the breathtaking beauty of wonderful islands, where crystal-clear waters meet golden sands and lush tropical landscapes teeming with vibrant flora and fauna. Whether you're seeking thrilling adventure, cultural experiences, or pure relaxation, these islands promise unforgettable memories, endless exploration, and a peaceful escape from the everyday hustle and bustle of life. Embrace nature’s paradise, indulge in local cuisine, and connect with the warm, welcoming island communities that make every visit truly special.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+          <h1>Camping.<br><span>Enjoy</span></h1>
+          <p>Experience the serene wonders of camping, where you can escape to nature's embrace and find peace beneath starry skies. Whether you're drawn to rugged mountain trails, tranquil lakesides, or dense forests, camping offers an immersive adventure filled with fresh air, wildlife, and unforgettable campfire moments. Enjoy the simplicity of outdoor living, discover new landscapes, and reconnect with the natural world around you. As you explore scenic vistas and hike hidden trails, embrace the tranquility, cook under the open sky, and create cherished memories that last a lifetime in the great outdoors.</p>
+          <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Adventures.<br><span>Offroad</span></h1>
+        <p>Embark on exhilarating off-road adventures, where rugged terrain and untamed landscapes invite you to explore the wild in its rawest form. Whether you're driving through rocky mountain paths, dense forests, or vast deserts, off-roading promises heart-pounding thrills and breathtaking vistas. Tackle challenging trails, ford rivers, and conquer steep inclines as you venture deeper into nature’s hidden corners. Embrace the freedom of the open road, test your skills, and experience the adrenaline rush that only off-road adventures can provide, creating stories of discovery and excitement that will fuel your adventurous spirit.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="content">
+      <h1>Road Trip.<br><span>Together</span></h1>
+      <p>Embark on an unforgettable road trip together, where every mile brings new discoveries and shared adventures. As you travel across scenic landscapes, from winding mountain roads to serene coastal highways, the journey becomes an exciting story you create side by side. Laugh, explore, and make spontaneous stops at hidden gems along the way. Whether you're chasing sunsets or stargazing from a quiet roadside, every moment deepens your connection. Embrace the freedom of the open road, the joy of togetherness, and the countless memories waiting to be made on this shared adventure.</p>
+      <a href="#">Read More</a>
+  </div>
+  <div class="content">
+    <h1>Feel Nature.<br><span>Relax</span></h1>
+    <p>Immerse yourself in the calming embrace of nature, where the gentle rustle of leaves and the soothing sounds of flowing water help you relax and unwind. Take a deep breath, feel the fresh air fill your lungs, and let the tranquility of the natural world wash over you. Whether you're hiking through lush forests, sitting by a peaceful lake, or simply lying under the open sky, nature offers a perfect escape from the rush of daily life. Reconnect with yourself, slow down, and savor the simple beauty of the world around you.</p>
+    <a href="#">Read More</a>
+</div>
+        <div class="media-icons">
+            <a href="https://facebook.com/iSoumyadeepDey"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/s0umy4_xd"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/iSoumyadeepDey"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/SoumyaExe"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="slider-navigation">
+          <div class="nav-btn active"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+      //Js For responsive nav menu!
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active")
+    });
+
+    //Js for video slider
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+
+    var sliderNav = function(manual){
+      btns.forEach(btn =>{
+        btn.classList.remove("active")
+      });
+
+      slides.forEach(slide =>{
+        slide.classList.remove("active")
+      });
+
+      contents.forEach(content =>{
+        content.classList.remove("active")
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () =>{
+        sliderNav(i)
+      });
+    });
+    </script>
+<footer>
+  <p>Made With &#9825; By Soumya</p>
+</footer>
+</body>
+</html>
