@@ -107,7 +107,7 @@ section{
 }
 
 .home .content h1{
-    font-size: 4em;
+    font-size: 3.9em;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -116,7 +116,7 @@ section{
 }
 
 .home .content h1 span{
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
 }
 
@@ -128,7 +128,7 @@ section{
   background: #fff;
   padding: 15px 35px;
   color: #1680AC;
-  font-size: 1.1em;
+  font-size: 1.0em;
   font-weight: 500;
   text-decoration: none;
   border-radius: 2px;
